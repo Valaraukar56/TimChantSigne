@@ -2,6 +2,7 @@
 
 Site vitrine de TimChantSigne : chansons interprétées en langue des signes (chansigne).
 Site statique HTML/CSS. Les images et favicons sont dans `assets/`.
+Pages : `index.html` (accueil) et `mentions-legales.html`. Le style commun est dans `style.css`, le JavaScript commun (onglets, formulaires, traduction FR / EN) dans `script.js`.
 Le logo utilisé sur le site est `assets/logo-transparent.png` (fond transparent). `assets/logo.png` est l'original sur fond blanc.
 
 ## Décisions du cahier des charges
@@ -13,10 +14,11 @@ Le logo utilisé sur le site est `assets/logo-transparent.png` (fond transparent
 - **Agenda :** oui, pour les dates de spectacles et d'ateliers.
 - **Réseaux :** liens vers Instagram et Facebook.
 - **Newsletter :** prévue mais masquée pour l'instant (attribut `hidden` sur la section).
+- **Témoignages :** section masquée pour l'instant (attribut `hidden`), en attente de vrais témoignages.
 - **Langues :** français et anglais.
-  Le bouton FR / EN traduit la page dans le navigateur, avec le dictionnaire `EN` du script en bas de `index.html`. La page est écrite en français. Tout nouveau texte, `placeholder`, `aria-label` ou `alt` doit recevoir sa traduction dans ce dictionnaire, sinon il reste en français.
+  Le bouton FR / EN traduit la page dans le navigateur, avec le dictionnaire `EN` de `script.js`. Pour un long texte, écrire deux blocs `data-langue="fr"` et `data-langue="en" hidden` au lieu de passer par le dictionnaire. La page est écrite en français. Tout nouveau texte, `placeholder`, `aria-label` ou `alt` doit recevoir sa traduction dans ce dictionnaire, sinon il reste en français.
 - **Email de contact :** timchantsigne@gmail.com
-- **Mentions légales :** gérées par Mathieu, le SIRET a été fourni.
+- **Mentions légales :** gérées par Mathieu, le développeur du site. La page `mentions-legales.html` est prête, mais les informations qui dépendent de la micro-entreprise (pas encore créée) sont des cases à remplir, repérables avec la classe `a-remplir`. Ne pas mettre le site en ligne publiquement avant de les avoir complétées.
 
 ## Charte graphique
 
