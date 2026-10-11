@@ -14,6 +14,7 @@ Le logo utilisé sur le site est `assets/logo-transparent.png` (fond transparent
 - **Réseaux :** liens vers Instagram et Facebook.
 - **Newsletter :** prévue mais masquée pour l'instant (attribut `hidden` sur la section).
 - **Langues :** français et anglais.
+  Le bouton FR / EN traduit la page dans le navigateur, avec le dictionnaire `EN` du script en bas de `index.html`. La page est écrite en français. Tout nouveau texte, `placeholder`, `aria-label` ou `alt` doit recevoir sa traduction dans ce dictionnaire, sinon il reste en français.
 - **Email de contact :** timchantsigne@gmail.com
 - **Mentions légales :** gérées par Mathieu, le SIRET a été fourni.
 
