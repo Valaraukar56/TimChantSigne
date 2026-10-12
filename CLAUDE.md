@@ -12,7 +12,10 @@ Le logo utilisé sur le site est `assets/logo-transparent.png` (fond transparent
 - **Rendez-vous :** prise de rendez-vous via Cal (cal.com). Le vrai lien reste à fournir.
 - **Paiement en ligne :** non.
 - **Agenda :** oui, pour les dates de spectacles et d'ateliers.
-- **Réseaux :** liens vers Instagram et Facebook.
+- **Réseaux :** liens dans le pied de page de chaque page.
+  - YouTube : https://www.youtube.com/@TimChantSigne
+  - Instagram : https://www.instagram.com/timchantsigne/
+  - Facebook : https://www.facebook.com/profile.php?id=61595219916062
 - **Newsletter :** prévue mais masquée pour l'instant (attribut `hidden` sur la section).
 - **Témoignages :** section masquée pour l'instant (attribut `hidden`), en attente de vrais témoignages.
 - **Langues :** français et anglais.

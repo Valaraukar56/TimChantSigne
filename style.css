@@ -427,6 +427,21 @@ body { background: var(--c-papier); color: var(--c-encre); }
 .formulaire__rgpd a { color: var(--c-violet); }
 [data-langue][hidden] { display: none; }
 
+/* Credit du realisateur */
+.credit { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.legal .credit__lien {
+    display: inline-flex; align-items: center; gap: .35rem;
+    padding: .35rem .9rem; border-radius: 999px;
+    background: var(--c-lilas); color: var(--c-violet);
+    font-weight: 600; text-decoration: none;
+    border: 1px solid transparent;
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+.legal .credit__lien svg { transition: transform .2s ease; }
+.legal .credit__lien:hover { background: var(--c-violet); color: var(--c-sur-bordeaux); }
+.legal .credit__lien:hover svg { transform: translate(2px, -2px); }
+.legal .credit__lien:focus-visible { outline: 3px solid var(--c-violet); outline-offset: 2px; }
+
 @media (max-width: 600px) {
     .fiche { grid-template-columns: 1fr; gap: .15rem; }
     .fiche dd { margin-bottom: .6rem; }
