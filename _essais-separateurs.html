@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimChantSigne | Chansigne, concerts et ateliers en langue des signes</title>
+    <meta name="description"
+        content="TimChantSigne interprète des chansons en langue des signes française : concerts chansignés, ateliers et interventions en structure. Prestations sur devis.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TimChantSigne, la musique se voit aussi">
+    <meta property="og:description"
+        content="Chansons interprétées en langue des signes : concerts, ateliers et vidéos accessibles à toutes et tous.">
+    <meta property="og:image" content="assets/android-chrome-512x512.png">
+    <meta property="og:locale" content="fr_FR">
+    <link rel="icon" href="assets/favicon.ico" sizes="48x48">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="theme-color" content="#6D1F2F">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:wght@400..700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:wght@400..700&display=swap"></noscript>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .essai-titre { padding: 1rem 0; background: #22161A; color: #FFFFFF; font-weight: 600; position: relative; z-index: 2; }
+        .essai-titre span { color: #C9B8FF; font-weight: 400; margin-left: .75rem; }
+        .essai { border-bottom: 8px solid #22161A; }
+        .essai .section { padding-bottom: 3rem; }
+
+        /* 1. Portée musicale */
+        .portee { position: relative; height: 41px; margin: 0 0 0; }
+        .portee::before {
+            content: ""; position: absolute; inset: 0;
+            background: repeating-linear-gradient(to bottom, color-mix(in srgb, var(--bordeaux) 28%, transparent) 0 1px, transparent 1px 10px);
+            -webkit-mask: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+            mask: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+        }
+        .portee svg { position: absolute; top: -14px; color: var(--bordeaux); }
+        .portee .n1 { left: 22%; top: -7px; }
+        .portee .n2 { left: 50%; top: -22px; } .portee .n2 svg { color: var(--violet); }
+        .portee .n3 { left: 76%; top: 3px; }
+
+        /* 2. Bandeau défilant */
+        .bandeau {
+            overflow: hidden; border-block: 1px solid var(--bordure);
+            background: var(--carte); padding: 1.1rem 0;
+        }
+        .bandeau__piste { display: flex; width: max-content; animation: defile 38s linear infinite; }
+        .bandeau__piste span {
+            display: inline-flex; align-items: center; gap: 2rem; padding-right: 2rem;
+            font-family: var(--serif); font-style: italic; font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+            color: var(--bordeaux); white-space: nowrap;
+        }
+        .bandeau__piste span::after { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--violet); }
+        @keyframes defile { to { transform: translateX(-50%); } }
+        @media (prefers-reduced-motion: reduce) { .bandeau__piste { animation: none; } }
+
+        /* 3. Bannière teintée à bord courbe */
+        .v3 .banniere {
+            background:
+                radial-gradient(60% 80% at 85% 35%, color-mix(in srgb, var(--lilas) 90%, transparent), transparent 70%),
+                var(--rose);
+            border-radius: 0 0 50% 50% / 0 0 clamp(40px, 7vw, 110px) clamp(40px, 7vw, 110px);
+            padding-bottom: clamp(4.5rem, 10vw, 8rem);
+        }
+        .v3 .section { padding-top: clamp(3rem, 7vw, 5rem); }
+    </style>
+</head>
+<body>
+<section class="essai v0"><p class="essai-titre"><span class="conteneur" style="display:block">0. Actuel<span>sans séparation</span></span></p><header class="banniere">
+        <div class="conteneur">
+            <div class="banniere__texte">
+                <span class="surtitre">Chansigne &amp; spectacle vivant</span>
+                <h1>TimChantSigne <em>la musique se voit aussi</em></h1>
+                <p class="accroche">
+                    Des chansons traduites et interprétées en langue des signes, pour que chaque note
+                    se partage avec les mains. Concerts, ateliers et vidéos accessibles à toutes et tous.
+                </p>
+                <div class="actions">
+                    <a href="#videos" class="btn">Découvrir les vidéos <svg class="btn__fleche" width="16"
+                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M5 12h14M13 6l6 6-6 6" />
+                        </svg></a>
+                    <a href="#prestations" class="lien">Réserver un atelier</a>
+                </div>
+            </div>
+            <div class="banniere__logo">
+                <picture><source srcset="assets/logo-sombre-moyen.webp 440w, assets/logo-sombre.webp 880w" sizes="(max-width: 900px) min(62vw, 300px), 440px" media="(prefers-color-scheme: dark)"><img src="assets/logo-transparent.webp" srcset="assets/logo-transparent-moyen.webp 440w, assets/logo-transparent.webp 880w" sizes="(max-width: 900px) min(62vw, 300px), 440px" alt="Logo TimChantSigne : deux mains et une note de musique" width="880" height="880" fetchpriority="high"></picture>
+            </div>
+        </div>
+    </header><section class="section" >
+            <div class="conteneur">
+                <div class="section__tete revele">
+                    <span class="section__surtitre"><span class="section__num">01</span>Vidéos</span>
+                    <h2>Le chansigne en images</h2>
+                    <p class="texte-2">Retrouvez les chansons signées par Timothy Irdel sur la chaîne YouTube
+                        TimChantSigne.</p>
+                </div>
+                <div class="video-vedette revele">
+                    <div class="lecteur">
+                        <a class="lecteur__bouton" href="https://www.youtube.com/watch?v=8i8iwhjDtSA" target="_blank"
+                            rel="noopener" aria-label="Voir la vidéo L'enfer de Stromae sur YouTube">
+                            <img src="https://i.ytimg.com/vi/8i8iwhjDtSA/maxresdefault.jpg" width="1280" height="720" alt=""
+                                loading="lazy">
+                            <span class="lecteur__play"><svg width="28" height="28" viewBox="0 0 24 24" fill="#6D1F2F"
+                                    aria-hidden="true">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg></span>
+                            <span class="vignette__duree">3:28</span>
+                        </a>
+                    </div>
+                    <div class="video-vedette__texte">
+                        <span class="tag tag--rose">Dernière vidéo</span>
+                        <h3>L'enfer</h3>
+                        <p class="texte-2">Stromae, chant signé par Timothy Irdel</p>
+                        <p class="carte__meta">Publiée le 27 juillet 2025</p>
+                        <div class="video-vedette__actions">
+                            <a href="https://www.youtube.com/watch?v=8i8iwhjDtSA" class="btn" target="_blank"
+                                rel="noopener">Voir sur YouTube</a>
+                            <a href="https://www.youtube.com/@TimChantSigne" class="lien" target="_blank"
+                                rel="noopener">Toute la chaîne</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section></section><section class="essai v1"><p class="essai-titre"><span class="conteneur" style="display:block">1. Portée musicale<span>cinq lignes fines et trois notes</span></span></p><header class="banniere">
+        <div class="conteneur">
+            <div class="banniere__texte">
+                <span class="surtitre">Chansigne &amp; spectacle vivant</span>
+                <h1>TimChantSigne <em>la musique se voit aussi</em></h1>
+                <p class="accroche">
+                    Des chansons traduites et interprétées en langue des signes, pour que chaque note
+                    se partage avec les mains. Concerts, ateliers et vidéos accessibles à toutes et tous.
+                </p>
+                <div class="actions">
+                    <a href="#videos" class="btn">Découvrir les vidéos <svg class="btn__fleche" width="16"
+                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M5 12h14M13 6l6 6-6 6" />
+                        </svg></a>
+                    <a href="#prestations" class="lien">Réserver un atelier</a>
+                </div>
+            </div>
+            <div class="banniere__logo">
+                <picture><source srcset="assets/logo-sombre-moyen.webp 440w, assets/logo-sombre.webp 880w" sizes="(max-width: 900px) min(62vw, 300px), 440px" media="(prefers-color-scheme: dark)"><img src="assets/logo-transparent.webp" srcset="assets/logo-transparent-moyen.webp 440w, assets/logo-transparent.webp 880w" sizes="(max-width: 900px) min(62vw, 300px), 440px" alt="Logo TimChantSigne : deux mains et une note de musique" width="880" height="880" fetchpriority="high"></picture>
+            </div>
+        </div>
+    </header><div class="conteneur"><div class="portee" aria-hidden="true"><span class="n1" style="position:absolute"><svg width="22" height="34" viewBox="0 0 22 34" fill="currentColor" aria-hidden="true"><ellipse cx="7" cy="27" rx="7" ry="5.2" transform="rotate(-20 7 27)"/><rect x="12.2" y="2" width="2" height="25"/><path d="M14 2c3 4 8 5 7 12-1-4-4-5-7-6z"/></svg></span><span class="n2" style="position:absolute"><svg width="22" height="34" viewBox="0 0 22 34" fill="currentColor" aria-hidden="true"><ellipse cx="7" cy="27" rx="7" ry="5.2" transform="rotate(-20 7 27)"/><rect x="12.2" y="2" width="2" height="25"/><path d="M14 2c3 4 8 5 7 12-1-4-4-5-7-6z"/></svg></span><span class="n3" style="position:absolute"><svg width="22" height="34" viewBox="0 0 22 34" fill="currentColor" aria-hidden="true"><ellipse cx="7" cy="27" rx="7" ry="5.2" transform="rotate(-20 7 27)"/><rect x="12.2" y="2" width="2" height="25"/><path d="M14 2c3 4 8 5 7 12-1-4-4-5-7-6z"/></svg></span></div></div><section class="section" >
+            <div class="conteneur">
+                <div class="section__tete revele">
+                    <span class="section__surtitre"><span class="section__num">01</span>Vidéos</span>
+                    <h2>Le chansigne en images</h2>
+                    <p class="texte-2">Retrouvez les chansons signées par Timothy Irdel sur la chaîne YouTube
+                        TimChantSigne.</p>
+                </div>
+                <div class="video-vedette revele">
+                    <div class="lecteur">
+                        <a class="lecteur__bouton" href="https://www.youtube.com/watch?v=8i8iwhjDtSA" target="_blank"
+                            rel="noopener" aria-label="Voir la vidéo L'enfer de Stromae sur YouTube">
+                            <img src="https://i.ytimg.com/vi/8i8iwhjDtSA/maxresdefault.jpg" width="1280" height="720" alt=""
+                                loading="lazy">
+                            <span class="lecteur__play"><svg width="28" height="28" viewBox="0 0 24 24" fill="#6D1F2F"
+                                    aria-hidden="true">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg></span>
+                            <span class="vignette__duree">3:28</span>
+                        </a>
+                    </div>
+                    <div class="video-vedette__texte">
+                        <span class="tag tag--rose">Dernière vidéo</span>
+                        <h3>L'enfer</h3>
+                        <p class="texte-2">Stromae, chant signé par Timothy Irdel</p>
+                        <p class="carte__meta">Publiée le 27 juillet 2025</p>
+                        <div class="video-vedette__actions">
+                            <a href="https://www.youtube.com/watch?v=8i8iwhjDtSA" class="btn" target="_blank"
+                                rel="noopener">Voir sur YouTube</a>
+                            <a href="https://www.youtube.com/@TimChantSigne" class="lien" target="_blank"
+                                rel="noopener">Toute la chaîne</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section></section><section class="essai v2"><p class="essai-titre"><span class="conteneur" style="display:block">2. Bandeau défilant<span>les activités défilent lentement</span></span></p><header class="banniere">
+        <div class="conteneur">
+            <div class="banniere__texte">
+                <span class="surtitre">Chansigne &amp; spectacle vivant</span>
+                <h1>TimChantSigne <em>la musique se voit aussi</em></h1>
+                <p class="accroche">
+                    Des chansons traduites et interprétées en langue des signes, pour que chaque note
+                    se partage avec les mains. Concerts, ateliers et vidéos accessibles à toutes et tous.
+                </p>
+                <div class="actions">
+                    <a href="#videos" class="btn">Découvrir les vidéos <svg class="btn__fleche" width="16"
+                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M5 12h14M13 6l6 6-6 6" />
+                        </svg></a>
+                    <a href="#prestations" class="lien">Réserver un atelier</a>
+                </div>
+            </div>
+            <div class="banniere__logo">
+                <picture><source srcset="assets/logo-sombre-moyen.webp 440w, assets/logo-sombre.webp 880w" sizes="(max-width: 900px) min(62vw, 300px), 440px" media="(prefers-color-scheme: dark)"><img src="assets/logo-transparent.webp" srcset="assets/logo-transparent-moyen.webp 440w, assets/logo-transparent.webp 880w" sizes="(max-width: 900px) min(62vw, 300px), 440px" alt="Logo TimChantSigne : deux mains et une note de musique" width="880" height="880" fetchpriority="high"></picture>
+            </div>
+        </div>
+    </header><div class="bandeau" aria-hidden="true"><div class="bandeau__piste"><span>Concerts chansignés</span><span>Ateliers</span><span>Interventions en structure</span><span>Vidéos</span><span>Langue des signes française</span><span>Concerts chansignés</span><span>Ateliers</span><span>Interventions en structure</span><span>Vidéos</span><span>Langue des signes française</span></div></div><section class="section" >
+            <div class="conteneur">
+                <div class="section__tete revele">
+                    <span class="section__surtitre"><span class="section__num">01</span>Vidéos</span>
+                    <h2>Le chansigne en images</h2>
+                    <p class="texte-2">Retrouvez les chansons signées par Timothy Irdel sur la chaîne YouTube
+                        TimChantSigne.</p>
+                </div>
+                <div class="video-vedette revele">
+                    <div class="lecteur">
+                        <a class="lecteur__bouton" href="https://www.youtube.com/watch?v=8i8iwhjDtSA" target="_blank"
+                            rel="noopener" aria-label="Voir la vidéo L'enfer de Stromae sur YouTube">
+                            <img src="https://i.ytimg.com/vi/8i8iwhjDtSA/maxresdefault.jpg" width="1280" height="720" alt=""
+                                loading="lazy">
+                            <span class="lecteur__play"><svg width="28" height="28" viewBox="0 0 24 24" fill="#6D1F2F"
+                                    aria-hidden="true">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg></span>
+                            <span class="vignette__duree">3:28</span>
+                        </a>
+                    </div>
+                    <div class="video-vedette__texte">
+                        <span class="tag tag--rose">Dernière vidéo</span>
+                        <h3>L'enfer</h3>
+                        <p class="texte-2">Stromae, chant signé par Timothy Irdel</p>
+                        <p class="carte__meta">Publiée le 27 juillet 2025</p>
+                        <div class="video-vedette__actions">
+                            <a href="https://www.youtube.com/watch?v=8i8iwhjDtSA" class="btn" target="_blank"
+                                rel="noopener">Voir sur YouTube</a>
+                            <a href="https://www.youtube.com/@TimChantSigne" class="lien" target="_blank"
+                                rel="noopener">Toute la chaîne</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section></section><section class="essai v3"><p class="essai-titre"><span class="conteneur" style="display:block">3. Bannière rosée à bord courbe<span>comme un rideau de scène</span></span></p><header class="banniere">
+        <div class="conteneur">
+            <div class="banniere__texte">
+                <span class="surtitre">Chansigne &amp; spectacle vivant</span>
+                <h1>TimChantSigne <em>la musique se voit aussi</em></h1>
+                <p class="accroche">
+                    Des chansons traduites et interprétées en langue des signes, pour que chaque note
+                    se partage avec les mains. Concerts, ateliers et vidéos accessibles à toutes et tous.
+                </p>
+                <div class="actions">
+                    <a href="#videos" class="btn">Découvrir les vidéos <svg class="btn__fleche" width="16"
+                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M5 12h14M13 6l6 6-6 6" />
+                        </svg></a>
+                    <a href="#prestations" class="lien">Réserver un atelier</a>
+                </div>
+            </div>
+            <div class="banniere__logo">
+                <picture><source srcset="assets/logo-sombre-moyen.webp 440w, assets/logo-sombre.webp 880w" sizes="(max-width: 900px) min(62vw, 300px), 440px" media="(prefers-color-scheme: dark)"><img src="assets/logo-transparent.webp" srcset="assets/logo-transparent-moyen.webp 440w, assets/logo-transparent.webp 880w" sizes="(max-width: 900px) min(62vw, 300px), 440px" alt="Logo TimChantSigne : deux mains et une note de musique" width="880" height="880" fetchpriority="high"></picture>
+            </div>
+        </div>
+    </header><section class="section" >
+            <div class="conteneur">
+                <div class="section__tete revele">
+                    <span class="section__surtitre"><span class="section__num">01</span>Vidéos</span>
+                    <h2>Le chansigne en images</h2>
+                    <p class="texte-2">Retrouvez les chansons signées par Timothy Irdel sur la chaîne YouTube
+                        TimChantSigne.</p>
+                </div>
+                <div class="video-vedette revele">
+                    <div class="lecteur">
+                        <a class="lecteur__bouton" href="https://www.youtube.com/watch?v=8i8iwhjDtSA" target="_blank"
+                            rel="noopener" aria-label="Voir la vidéo L'enfer de Stromae sur YouTube">
+                            <img src="https://i.ytimg.com/vi/8i8iwhjDtSA/maxresdefault.jpg" width="1280" height="720" alt=""
+                                loading="lazy">
+                            <span class="lecteur__play"><svg width="28" height="28" viewBox="0 0 24 24" fill="#6D1F2F"
+                                    aria-hidden="true">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg></span>
+                            <span class="vignette__duree">3:28</span>
+                        </a>
+                    </div>
+                    <div class="video-vedette__texte">
+                        <span class="tag tag--rose">Dernière vidéo</span>
+                        <h3>L'enfer</h3>
+                        <p class="texte-2">Stromae, chant signé par Timothy Irdel</p>
+                        <p class="carte__meta">Publiée le 27 juillet 2025</p>
+                        <div class="video-vedette__actions">
+                            <a href="https://www.youtube.com/watch?v=8i8iwhjDtSA" class="btn" target="_blank"
+                                rel="noopener">Voir sur YouTube</a>
+                            <a href="https://www.youtube.com/@TimChantSigne" class="lien" target="_blank"
+                                rel="noopener">Toute la chaîne</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section></section>
+</body>
+</html>
