@@ -40,9 +40,9 @@
     <meta name="theme-color" content="#6D1F2F">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:wght@400..700&display=swap"
-        rel="stylesheet">
+    <!-- Polices chargées sans bloquer l'affichage -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:wght@400..700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:wght@400..700&display=swap"></noscript>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -52,7 +52,7 @@
     <nav class="nav" aria-label="Navigation principale">
         <div class="conteneur">
             <a href="#" class="nav__marque">
-                <picture><source srcset="assets/logo-sombre.png" media="(prefers-color-scheme: dark)"><img src="assets/logo-transparent.png" alt=""></picture>
+                <picture><source srcset="assets/logo-sombre-petit.webp" media="(prefers-color-scheme: dark)"><img src="assets/logo-transparent-petit.webp" alt="" width="128" height="128"></picture>
                 TimChantSigne
             </a>
             <ul class="nav__liens" id="menu">
@@ -91,23 +91,12 @@
                 </div>
             </div>
             <div class="banniere__logo">
-                <picture><source srcset="assets/logo-sombre.png" media="(prefers-color-scheme: dark)"><img src="assets/logo-transparent.png" alt="Logo TimChantSigne : deux mains et une note de musique"></picture>
+                <picture><source srcset="assets/logo-sombre.webp" media="(prefers-color-scheme: dark)"><img src="assets/logo-transparent.webp" alt="Logo TimChantSigne : deux mains et une note de musique" width="880" height="880" fetchpriority="high"></picture>
             </div>
         </div>
     </header>
 
     <main id="contenu">
-        <section class="chiffres" aria-label="Chiffres clés">
-            <div class="conteneur">
-                <div class="chiffres__grille">
-                    <div><strong>120</strong><span>chansons signées</span></div>
-                    <div><strong>48</strong><span>concerts accessibles</span></div>
-                    <div><strong>2 300</strong><span>élèves en atelier</span></div>
-                    <div><strong>85 k</strong><span>abonnés en ligne</span></div>
-                </div>
-            </div>
-        </section>
-
         <section class="section" id="videos">
             <div class="conteneur">
                 <div class="section__tete revele">
@@ -438,7 +427,7 @@
             <div class="pied__haut">
                 <div>
                     <a href="#" class="pied__marque">
-                        <picture><source srcset="assets/logo-sombre.png" media="(prefers-color-scheme: dark)"><img src="assets/logo-transparent.png" alt=""></picture>
+                        <picture><source srcset="assets/logo-sombre-petit.webp" media="(prefers-color-scheme: dark)"><img src="assets/logo-transparent-petit.webp" alt="" width="128" height="128"></picture>
                         TimChantSigne
                     </a>
                     <p class="pied__devise">la musique se voit aussi</p>

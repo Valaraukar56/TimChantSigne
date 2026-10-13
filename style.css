@@ -188,7 +188,7 @@ p { text-wrap: pretty; }
 /* ===== Bannière ===== */
 .banniere {
     position: relative; overflow: hidden;
-    padding: clamp(3rem, 8vw, 6.5rem) 0 clamp(6rem, 12vw, 9rem);
+    padding: clamp(3rem, 8vw, 6.5rem) 0 clamp(3.5rem, 9vw, 7rem);
     background:
         radial-gradient(60% 80% at 85% 35%, color-mix(in srgb, var(--lilas) 90%, transparent), transparent 70%),
         radial-gradient(50% 50% at 5% 60%, color-mix(in srgb, var(--rose) 90%, transparent), transparent 70%),
@@ -244,28 +244,13 @@ h1 em {
 .banniere__logo { animation: apparait 1.2s .2s cubic-bezier(.2, .7, .2, 1) both; }
 
 @keyframes monte { from { opacity: 0; transform: translateY(18px); } }
-@keyframes apparait { from { opacity: 0; transform: scale(.92) rotate(-6deg); } }
+@keyframes apparait { from { transform: scale(.92) rotate(-6deg); } }
 @keyframes flotte { 50% { transform: translateY(-10px) rotate(1.5deg); } }
 @keyframes tourne { to { transform: rotate(360deg); } }
 
-/* ===== Chiffres ===== */
-.chiffres { position: relative; z-index: 1; margin-top: clamp(-5rem, -8vw, -3.5rem); }
-.chiffres__grille {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    background: var(--carte); border: 1px solid var(--bordure); border-radius: var(--rayon-l);
-    box-shadow: var(--ombre);
-}
-.chiffres__grille > div { padding: clamp(1.25rem, 3vw, 2rem) clamp(1rem, 2.5vw, 2rem); }
-.chiffres__grille > div + div { border-left: 1px solid var(--bordure); }
-.chiffres strong {
-    display: block; font-family: var(--serif); font-weight: 500;
-    font-size: clamp(2rem, 4vw, 2.9rem); line-height: 1; letter-spacing: -.03em;
-    font-variant-numeric: tabular-nums lining-nums; color: var(--bordeaux); margin-bottom: .4rem;
-}
-.chiffres span { font-size: .925rem; color: var(--texte-2); }
-
 /* ===== Sections ===== */
 .section { padding: clamp(4.5rem, 10vw, 8rem) 0 clamp(5rem, 11vw, 8.5rem); }
+main > .section:first-child { padding-top: clamp(2rem, 5vw, 3.5rem); }
 .section--teinte {
     background:
         radial-gradient(40% 60% at 100% 0%, color-mix(in srgb, var(--lilas) 70%, transparent), transparent 70%),
@@ -557,9 +542,6 @@ h1 em {
     .banniere .conteneur { grid-template-columns: 1fr; }
     .banniere__logo { grid-row: 1; width: min(62vw, 300px); }
     .video-vedette, .apropos, .panneau { grid-template-columns: 1fr; }
-    .chiffres__grille { grid-template-columns: repeat(2, 1fr); }
-    .chiffres__grille > div:nth-child(3) { border-left: 0; }
-    .chiffres__grille > div:nth-child(n+3) { border-top: 1px solid var(--bordure); }
     .citation { rotate: 0deg; margin-top: 1.5rem; }
     .pied__haut { grid-template-columns: 1fr 1fr; }
     .pied__haut > :first-child { grid-column: 1 / -1; }
