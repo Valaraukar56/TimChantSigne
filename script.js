@@ -1,3 +1,52 @@
+document.documentElement.classList.add('js');
+
+// Menu mobile
+const boutonMenu = document.querySelector('.nav__menu');
+const menu = document.getElementById('menu');
+function basculerMenu(ouvrir) {
+    boutonMenu.setAttribute('aria-expanded', ouvrir);
+    boutonMenu.setAttribute('aria-label', document.documentElement.lang === 'en'
+        ? (ouvrir ? 'Close menu' : 'Open menu')
+        : (ouvrir ? 'Fermer le menu' : 'Ouvrir le menu'));
+    boutonMenu.setAttribute('data-fr-aria-label', ouvrir ? 'Fermer le menu' : 'Ouvrir le menu');
+    menu.toggleAttribute('data-ouvert', ouvrir);
+}
+if (boutonMenu) {
+    boutonMenu.addEventListener('click', () => basculerMenu(boutonMenu.getAttribute('aria-expanded') !== 'true'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => basculerMenu(false)));
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && menu.hasAttribute('data-ouvert')) { basculerMenu(false); boutonMenu.focus(); }
+    });
+}
+
+// Apparition des blocs au défilement
+const blocs = document.querySelectorAll('.revele');
+if ('IntersectionObserver' in window) {
+    const observateur = new IntersectionObserver(entrees => {
+        entrees.forEach(e => {
+            if (!e.isIntersecting) return;
+            e.target.classList.add('visible');
+            observateur.unobserve(e.target);
+        });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    blocs.forEach(b => observateur.observe(b));
+} else {
+    blocs.forEach(b => b.classList.add('visible'));
+}
+
+// Lien de navigation de la section visible
+const liensNav = [...document.querySelectorAll('.nav__liens a[href^="#"]:not(.nav__devis)')];
+const sections = liensNav.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+if (sections.length && 'IntersectionObserver' in window) {
+    const suivi = new IntersectionObserver(entrees => {
+        entrees.forEach(e => {
+            if (!e.isIntersecting) return;
+            liensNav.forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === '#' + e.target.id));
+        });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(s => suivi.observe(s));
+}
+
 // Onglets des prestations
 const onglets = [...document.querySelectorAll('.onglet')];
 function activer(onglet) {
@@ -149,7 +198,13 @@ const EN = {
     "Ville": "City",
     "Votre adresse e-mail": "Your email address",
     "Adresse e-mail": "Email address",
-    "Liens secondaires": "Secondary links"
+    "Liens secondaires": "Secondary links",
+    "Aller au contenu": "Skip to content",
+    "Ouvrir le menu": "Open menu",
+    "Fermer le menu": "Close menu",
+    "Suivre Tim": "Follow Tim",
+    "TimChantSigne | Chansigne, concerts et ateliers en langue des signes": "TimChantSigne | Sign-song concerts and workshops in sign language",
+    "Mentions légales | TimChantSigne": "Legal notice | TimChantSigne"
 };
 const ATTRIBUTS = ['placeholder', 'aria-label', 'alt', 'title'];
 const normaliser = t => t.replace(/\s+/g, ' ').trim();
@@ -175,6 +230,9 @@ function traduire(langue) {
             el.setAttribute(a, langue === 'en' && normaliser(fr) in EN ? EN[normaliser(fr)] : fr);
         });
     });
+    if (!originaux.has(document)) originaux.set(document, document.title);
+    const titreFr = originaux.get(document);
+    document.title = langue === 'en' && titreFr in EN ? EN[titreFr] : titreFr;
     document.querySelectorAll('[data-langue]').forEach(el => { el.hidden = el.dataset.langue !== langue; });
     document.documentElement.lang = langue;
     document.querySelectorAll('.langues a').forEach(a => {

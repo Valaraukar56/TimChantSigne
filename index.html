@@ -22,80 +22,101 @@
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TimChantSigne</title>
+    <title>TimChantSigne | Chansigne, concerts et ateliers en langue des signes</title>
+    <meta name="description"
+        content="TimChantSigne interprète des chansons en langue des signes française : concerts chansignés, ateliers et interventions en structure. Prestations sur devis.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TimChantSigne, la musique se voit aussi">
+    <meta property="og:description"
+        content="Chansons interprétées en langue des signes : concerts, ateliers et vidéos accessibles à toutes et tous.">
+    <meta property="og:image" content="assets/android-chrome-512x512.png">
+    <meta property="og:locale" content="fr_FR">
     <link rel="icon" href="assets/favicon.ico" sizes="48x48">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     <link rel="manifest" href="assets/site.webmanifest">
-    <meta name="theme-color" content="#6B1A2B">
+    <meta name="theme-color" content="#6D1F2F">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito+Sans:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:wght@400..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <a class="saut" href="#contenu">Aller au contenu</a>
+
     <nav class="nav" aria-label="Navigation principale">
         <div class="conteneur">
             <a href="#" class="nav__marque">
-                <img src="assets/logo-transparent.png" alt="">
+                <picture><source srcset="assets/logo-sombre.png" media="(prefers-color-scheme: dark)"><img src="assets/logo-transparent.png" alt=""></picture>
                 TimChantSigne
             </a>
-            <ul class="nav__liens">
+            <ul class="nav__liens" id="menu">
                 <li><a href="#videos">Vidéos</a></li>
                 <li><a href="#apropos">À propos</a></li>
                 <li><a href="#agenda">Agenda</a></li>
                 <li><a href="#prestations">Prestations</a></li>
+                <li><a href="#prestations" class="nav__devis">Demander un devis</a></li>
             </ul>
             <div class="langues" aria-label="Langue">
                 <a href="#" aria-current="true" lang="fr">FR</a>
                 <a href="#" lang="en">EN</a>
             </div>
             <a href="#prestations" class="btn">Demander un devis</a>
+            <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu"
+                aria-label="Ouvrir le menu"><span></span></button>
         </div>
     </nav>
 
     <header class="banniere">
-        <div class="banniere__logo">
-            <img src="assets/logo-transparent.png" alt="Logo TimChantSigne : deux mains et une note de musique">
-        </div>
-        <div class="banniere__texte">
-            <span class="surtitre">Chansigne &amp; spectacle vivant</span>
-            <h1>TimChantSigne <em>la musique se voit aussi</em></h1>
-            <p class="accroche">
-                Des chansons traduites et interprétées en langue des signes, pour que chaque note
-                se partage avec les mains. Concerts, ateliers et vidéos accessibles à toutes et tous.
-            </p>
-            <div class="actions">
-                <a href="#videos" class="bouton bouton--plein">Découvrir les vidéos</a>
-                <a href="#prestations" class="bouton bouton--contour">Réserver un atelier</a>
+        <div class="conteneur">
+            <div class="banniere__texte">
+                <span class="surtitre">Chansigne &amp; spectacle vivant</span>
+                <h1>TimChantSigne <em>la musique se voit aussi</em></h1>
+                <p class="accroche">
+                    Des chansons traduites et interprétées en langue des signes, pour que chaque note
+                    se partage avec les mains. Concerts, ateliers et vidéos accessibles à toutes et tous.
+                </p>
+                <div class="actions">
+                    <a href="#videos" class="btn">Découvrir les vidéos <svg class="btn__fleche" width="16"
+                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M5 12h14M13 6l6 6-6 6" />
+                        </svg></a>
+                    <a href="#prestations" class="lien">Réserver un atelier</a>
+                </div>
+            </div>
+            <div class="banniere__logo">
+                <picture><source srcset="assets/logo-sombre.png" media="(prefers-color-scheme: dark)"><img src="assets/logo-transparent.png" alt="Logo TimChantSigne : deux mains et une note de musique"></picture>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="contenu">
         <section class="chiffres" aria-label="Chiffres clés">
             <div class="conteneur">
-                <div><strong>120</strong><span>chansons signées</span></div>
-                <div><strong>48</strong><span>concerts accessibles</span></div>
-                <div><strong>2 300</strong><span>élèves en atelier</span></div>
-                <div><strong>85 k</strong><span>abonnés en ligne</span></div>
+                <div class="chiffres__grille">
+                    <div><strong>120</strong><span>chansons signées</span></div>
+                    <div><strong>48</strong><span>concerts accessibles</span></div>
+                    <div><strong>2 300</strong><span>élèves en atelier</span></div>
+                    <div><strong>85 k</strong><span>abonnés en ligne</span></div>
+                </div>
             </div>
         </section>
 
         <section class="section" id="videos">
             <div class="conteneur">
-                <div class="section__tete">
-                    <span class="section__surtitre">Vidéos</span>
+                <div class="section__tete revele">
+                    <span class="section__surtitre"><span class="section__num">01</span>Vidéos</span>
                     <h2>Le chansigne en images</h2>
                     <p class="texte-2">Retrouvez les chansons signées par Timothy Irdel sur la chaîne YouTube
                         TimChantSigne.</p>
                 </div>
-                <div class="video-vedette">
+                <div class="video-vedette revele">
                     <div class="lecteur">
                         <a class="lecteur__bouton" href="https://www.youtube.com/watch?v=8i8iwhjDtSA" target="_blank"
                             rel="noopener" aria-label="Voir la vidéo L'enfer de Stromae sur YouTube">
@@ -115,7 +136,7 @@
                         <div class="video-vedette__actions">
                             <a href="https://www.youtube.com/watch?v=8i8iwhjDtSA" class="btn" target="_blank"
                                 rel="noopener">Voir sur YouTube</a>
-                            <a href="https://www.youtube.com/@TimChantSigne" class="btn btn--contour" target="_blank"
+                            <a href="https://www.youtube.com/@TimChantSigne" class="lien" target="_blank"
                                 rel="noopener">Toute la chaîne</a>
                         </div>
                     </div>
@@ -125,8 +146,8 @@
 
         <section class="section section--teinte" id="apropos">
             <div class="conteneur apropos">
-                <div>
-                    <span class="section__surtitre">À propos</span>
+                <div class="revele">
+                    <span class="section__surtitre"><span class="section__num">02</span>À propos</span>
                     <h2>Faire danser les mots avec les mains</h2>
                     <p class="texte-2">
                         Tim a découvert le chansigne en 2018 lors d'un festival. Depuis, il adapte des
@@ -138,7 +159,7 @@
                         même chanson, au même moment, ensemble.
                     </p>
                 </div>
-                <figure class="citation">
+                <figure class="citation revele">
                     <blockquote>« Une chanson ne s'écoute pas seulement. Elle se regarde, elle se ressent. »
                     </blockquote>
                     <figcaption>Tim, fondateur de TimChantSigne</figcaption>
@@ -148,11 +169,11 @@
 
         <section class="section" id="agenda">
             <div class="conteneur">
-                <div class="section__tete">
-                    <span class="section__surtitre">Agenda</span>
+                <div class="section__tete revele">
+                    <span class="section__surtitre"><span class="section__num">03</span>Agenda</span>
                     <h2>Prochains concerts</h2>
                 </div>
-                <ul class="agenda">
+                <ul class="agenda revele">
                     <li>
                         <div class="date"><strong>14</strong><span>nov.</span></div>
                         <div>
@@ -183,13 +204,13 @@
 
         <section class="section section--teinte" id="prestations">
             <div class="conteneur">
-                <div class="section__tete">
-                    <span class="section__surtitre">Prestations</span>
+                <div class="section__tete revele">
+                    <span class="section__surtitre"><span class="section__num">04</span>Prestations</span>
                     <h2>Travaillons ensemble</h2>
                     <p class="texte-2">Choisissez votre activité, puis décrivez votre projet. Vous pouvez aussi réserver
                         un appel pour en parler de vive voix.</p>
                 </div>
-                <div class="onglets" role="tablist" aria-label="Activités">
+                <div class="onglets revele" role="tablist" aria-label="Activités">
                     <button class="onglet" role="tab" id="onglet-spectacles" aria-controls="panneau-spectacles"
                         aria-selected="true">Spectacles</button>
                     <button class="onglet" role="tab" id="onglet-ateliers" aria-controls="panneau-ateliers"
@@ -414,36 +435,49 @@
 
     <footer class="pied">
         <div class="conteneur">
-            <div>
+            <div class="pied__haut">
+                <div>
+                    <a href="#" class="pied__marque">
+                        <picture><source srcset="assets/logo-sombre.png" media="(prefers-color-scheme: dark)"><img src="assets/logo-transparent.png" alt=""></picture>
+                        TimChantSigne
+                    </a>
+                    <p class="pied__devise">la musique se voit aussi</p>
+                </div>
+                <div>
+                    <p class="pied__titre">Contact</p>
+                    <a class="pied__mail" href="mailto:timchantsigne@gmail.com">timchantsigne@gmail.com</a>
+                </div>
+                <div>
+                    <p class="pied__titre">Suivre Tim</p>
+                    <div class="reseaux">
+                        <a href="https://www.youtube.com/@TimChantSigne" aria-label="YouTube" target="_blank"
+                            rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                                aria-hidden="true">
+                                <path
+                                    d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z" />
+                            </svg></a>
+                        <a href="https://www.instagram.com/timchantsigne/" aria-label="Instagram" target="_blank"
+                            rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <rect x="3" y="3" width="18" height="18" rx="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+                            </svg></a>
+                        <a href="https://www.facebook.com/profile.php?id=61595219916062" aria-label="Facebook"
+                            target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor" aria-hidden="true">
+                                <path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z" />
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pied__bas">
                 <p>© 2026 TimChantSigne. Contenu fictif pour test.</p>
-                <p><a class="pied__mail" href="mailto:timchantsigne@gmail.com"
-                        style="margin:0">timchantsigne@gmail.com</a></p>
+                <nav aria-label="Liens secondaires">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="#prestations">Contact</a>
+                </nav>
             </div>
-            <div class="reseaux">
-                <a href="https://www.youtube.com/@TimChantSigne" aria-label="YouTube" target="_blank"
-                    rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"
-                        aria-hidden="true">
-                        <path
-                            d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z" />
-                    </svg></a>
-                <a href="https://www.instagram.com/timchantsigne/" aria-label="Instagram" target="_blank"
-                    rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" aria-hidden="true">
-                        <rect x="3" y="3" width="18" height="18" rx="5" />
-                        <circle cx="12" cy="12" r="4" />
-                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
-                    </svg></a>
-                <a href="https://www.facebook.com/profile.php?id=61595219916062" aria-label="Facebook" target="_blank"
-                    rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"
-                        aria-hidden="true">
-                        <path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z" />
-                    </svg></a>
-            </div>
-            <nav aria-label="Liens secondaires">
-                <a href="mentions-legales.html">Mentions légales</a>
-                <a href="#">Accessibilité</a>
-                <a href="#prestations">Contact</a>
-            </nav>
         </div>
     </footer>
 
