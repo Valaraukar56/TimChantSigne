@@ -3,7 +3,7 @@
 Site vitrine de TimChantSigne : chansons interprétées en langue des signes (chansigne).
 Site statique HTML/CSS. Les images et favicons sont dans `assets/`.
 Pages : `index.html` (accueil) et `mentions-legales.html`. Le style commun est dans `style.css`, le JavaScript commun (onglets, formulaires, traduction FR / EN) dans `script.js`.
-Le logo utilisé sur le site est `assets/logo-transparent.png` (fond transparent). `assets/logo.png` est l'original sur fond blanc. `assets/logo-sombre.png` est une version éclaircie (recoloration automatique) pour le mode sombre. Le site charge les versions WebP allégées (`logo-transparent.webp` et `logo-sombre.webp` en 880px pour la bannière, `-petit.webp` en 128px pour la navigation et le pied de page) : les régénérer si un PNG change.
+Le logo utilisé sur le site est `assets/logo-transparent.png` (fond transparent). `assets/logo.png` est l'original sur fond blanc. `assets/logo-sombre.png` est une version éclaircie (recoloration automatique) pour le mode sombre. Le site charge les versions WebP allégées (`logo-transparent.webp` et `logo-sombre.webp` en 880px pour la bannière, `-moyen.webp` en 440px pour les petits écrans, `-petit.webp` en 128px pour la navigation et le pied de page) : les régénérer si un PNG change.
 
 ## Décisions du cahier des charges
 
